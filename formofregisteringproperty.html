@@ -1,0 +1,374 @@
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title> فورم ثبت ملکیت </title>
+</head> 
+
+<body class="container">
+
+    <div class="content">
+
+        <h2 class="set-heading"> فورم ثبت ملکیت</h2>
+
+        <ul class="breadcrumb  registeringofproperty" dir="rtl">
+            <li><a href="#">دش بورد</a></li>
+            <li><a href="#">مالکین</a></li>
+            <li><a href="#"> ثبت ملکیت</a></li>
+        </ul>
+
+        <div class="properties-of-possess">
+            <h3 class="details-of-possessor__headingtwo">مشخصات ملک</h3>
+
+            <form action="#" class="property__form formOfRegisteringProperty" dir="rtl">
+                <input type="hidden" value="" id="secret">
+
+                <div class="property__form--text">
+                    <div class="formcontainer__form--field">
+                        <label for=""> مالک </label>
+                        <svg class="user__id" onclick="openWindowPopup()">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                        <input type="text" id="possessor" disabled>
+                    </div>
+ 
+                    <div class="formcontainer__form--field">
+                        <label for="" class="text_of_property">نوع ملک</label>
+                        <select class="select_kind_of_property">
+                            <option value="0">رهایشی</option>
+                            <option value="1"> دولتی</option>
+                            <option value="2">خصوصی</option>
+                            <option value="3">رهایشی</option>
+                            <option value="4">دولتی</option>
+                        </select>
+                    </div>
+                    <div class="formcontainer__form--field"> <label for=""> ناحیه </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> زون شهری </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> بلاک </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> شمال</label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> شمال</label> <input type="text"> </div>
+
+                </div>
+
+                <div class="property__form--text">
+                    <div class="formcontainer__form--field"> <label for=""> نام سرک </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> گذر </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> واحد </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> منطقه </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> تعمیر به اساس نقشه </label> <input
+                            type="text"> </div>
+                            <div class="formcontainer__form--field"> <label for=""> شمال</label> <input type="text"> </div>
+                            <div class="formcontainer__form--field"> <label for=""> شمال</label> <input type="text"> </div>
+
+                </div>
+
+                <div class="property__form--text">
+                    <div class="areasize">حدود اربعه</div>
+                    <div class="formcontainer__form--field"> <label for=""> شمال</label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> جنوب </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> شرق </label> <input type="text"> </div>
+                    <div class="formcontainer__form--field"> <label for=""> غرب </label> <input type="text"> </div>
+                </div>
+  
+                <div class="overflowed__items">
+ 
+                    <div class="property__form--text">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+    
+                    </div>
+
+                   
+
+                </div> 
+
+                <div class="form__buttons">
+                    <input type="submit" value="ذخیره">   
+                    <button class="smoothScroll" id="smoothScroll"> افزودن ملکیت</button>
+                </div> 
+       
+            </form>
+        </div>
+  
+        <div class="details-of-possessor details-of-possessor-changed" id="calculate_it">
+
+            <h3 class="details-of-possessor__headingtwo details-of-possessor__headingthree">قیمت گذاری ملک</h3>
+
+            <form action="#" class="property-form__second" dir="rtl" id="calculateBuildingform">
+ 
+                <div class="property-form__second--wrapper">
+
+                    <div class="property-form__second--column  property-form__second--column--first">
+                        <i></i>
+                        <label class="property-form__second--column__field"><input type="checkbox"
+                                class="first-field"></label>
+                        <label class="property-form__second--column__field"><input type="checkbox"
+                                class="first-field"></label>
+                        <label class="property-form__second--column__field"><input type="checkbox"
+                                class="first-field"></label>
+                        <label class="property-form__second--column__field"><input type="checkbox"
+                                class="first-field"></label>
+                        <label class="property-form__second--column__field"><input type="checkbox"
+                                class="first-field"></label>
+                    </div>
+                    <!-- <hr style="display: inline;"> -->
+                    <div class="property-form__second--column">
+                        <p>نوع سازه</p>
+                        <label class="property-form__second--column__field"><input type="text" value="ساختمان"
+                                disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" value="تهکاوی"
+                                disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" value="الحاقیه"
+                                disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" value="دیوار"
+                                disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" value="زمین"
+                                disabled></label>
+                    </div>
+
+                    <!-- <hr style="display: inline;"> -->
+ 
+                    <div class="property-form__second--column">
+                        <p> درجه سازه</p>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                    </div>
+
+
+
+
+                    <div class="property-form__second--column">
+                        <p>تعداد طبقات</p>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text"></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                    </div>
+
+
+
+                    <div class="property-form__second--column">
+                        <p>اندازه زمین</p>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" id="sizeOfWall"></label>
+                        <label class="property-form__second--column__field"><input type="text" id="sizeOfLand"></label>
+                    </div>
+
+
+                    <div class="property-form__second--column">
+                        <p>فی متر مربع</p>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="wallPerMeter"></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="landPerMeter"></label>
+                    </div>
+
+
+                    <div class="property-form__second--column">
+                        <p>اندازه ساختمان</p>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="sizeOfBuilding"></label>
+                        <label class="property-form__second--column__field"><input type="text" id="sizeOfFloor"></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="sizeOfIsolated"></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                    </div>
+
+
+                    <div class="property-form__second--column">
+                        <p> فی متر مکعب</p>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="buildingPerMeter"></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="floorPerMeter"></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="isolatedPerMeter"></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                        <label class="property-form__second--column__field"><input type="text" disabled></label>
+                    </div>
+
+
+                    <div class="property-form__second--column">
+                        <p>مجموع</p>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="totalOfBuilding"></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="totalOfFloor"></label>
+                        <label class="property-form__second--column__field"><input type="text"
+                                id="totalOfIsolated"></label>
+                        <label class="property-form__second--column__field"><input type="text" id="totalOfWall"></label>
+                        <label class="property-form__second--column__field"><input type="text" id="totalOfLand"></label>
+                    </div>
+
+                </div>
+
+                <div class="btn-calculate">
+                    <button class="btn-calculate__button">محاسبه کن</button>
+                </div>
+
+            </form>
+        </div>
+
+
+        <form action="#" dir="rtl" class="add-property-form" method="POST">
+
+            <div class="determive-value__form">
+                <div>
+                    <div class="formcontainer__form--field">
+                        <label for=""> مجموع قیمت گذاری شده </label>
+                        <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required="required"
+                            id="sumOfAll">
+                    </div>
+                    <div class="formcontainer__form--field">
+                        <label for=""> درصد مالیاتی </label>
+                        <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required="required"
+                            id="percentageOfTax" ;>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="formcontainer__form--field"> <label for=""> مالیات سالانه به افغانی </label>
+                        <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required="required"
+                            id="taxPerYear">
+                    </div>
+                    <div class="formcontainer__form--field"> <label for=""> ثبت شده توسط </label>
+                        <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                            required="required">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-calculate">
+                <input type="reset" value=" لغو" class="btn-calculate__button">
+
+                <input type="submit" value="افزودن ملکیت" class="btn-calculate__button">
+
+                <!-- <button class="btn-calculate__button"> افزودن ملکیت</button> -->
+                <!-- <button class="btn-calculate__button"> افزودن ملکیت</button> -->
+            </div>
+            <!--              
+            <div class="btn-calculate">
+                <button class="btn-calculate__button"> افزودن ملکیت</button>
+            </div> -->
+
+        </form>
+
+    </div>
+
+
+
+    <div class="nav-bar">
+        <div class="describe">
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span>مالکین <span>
+                                <svg class="nav-bar__icon">
+                                    <use xlink:href="img/sprite.svg#icon-users"></use>
+                                </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="about-text">
+            <p class="about"> درباره</p>
+            یاد داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

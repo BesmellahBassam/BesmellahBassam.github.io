@@ -1,0 +1,398 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>استفاده کننده گان سیستم</title>
+    
+</head>    
+ 
+<body class="container">
+<div class="search_box_wrapper"> 
+    <div class="searchbox" id="searchbox"> 
+        <p class="searchbox__form--popup">
+            <span class="alert__closebtn alert__closebtn__posspage"
+             onclick="hideBox()">&times;</span>
+            <span class="searchbox__form--popup--search">جستجو </span>
+        </p>  
+        <form action="" class="searchbox__form" dir="rtl"  method="POST">
+  
+          
+            
+    
+            <div class="searchbox__form--pillar">
+                <div class="formcontainer__form--field"><label for="">اسم شخص</label><input type="text"> </div>
+                <div class="formcontainer__form--field"><label for="">اسم پدر</label><input type="text"> </div>
+                <div class="formcontainer__form--field"><label for="">اسم پدر کلان</label><input type="text"> </div>
+            </div> 
+
+            <div class="searchbox__form--pillar">
+                <div class="formcontainer__form--field">  <label for="">سرپرست فامیل</label><input type="text"> </div>
+                <div class="formcontainer__form--field">  <label for="">شماره تذکره</label><input type="text"> </div>
+                <div class="formcontainer__form--field"> <label for="">شماره تماس</label><input type="text"> </div>
+            </div>
+
+            <p class="searchbox__form__btn--wrapper">
+                <input type="submit" value="جستجو">
+            </p>
+
+        </form>
+    </div>
+</div>    
+
+   
+            
+<div class="cd-popup" role="">
+    <div class="cd-popup-container">
+        <span>! اخطاریه</span>   
+        <p id="servertext">    </p>
+        <form action="#" method="POST" class="cd-buttons" id="form-id">
+            <input type="hidden" name="" value="" id="hiddenfield"> 
+            <input type="submit" value="بلی" id="yes">
+            <button class="no">نخیر</button>
+        </form>     
+             
+        <a href="#0" class="cd-popup-close img-replace"></a>
+    </div> <!-- cd-popup-container -->
+</div> <!-- cd-popup -->  
+     
+      
+    <div class="content">
+        
+        <div class="actions">
+            <div class="register register-person ">
+                <a href="" class="register__button"> راجستر شخص
+                <svg class="register__icon">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+            </a>
+            </div> 
+            <h2 class="actions__heading">بخش مالکین</h2>
+            <div class="actions__form actions__form--users"> 
+                <button href="#" class="actions__form--search" onclick="showBox(event)">جستجو</button>
+            </div>
+        </div> 
+        <!-- <div>helll oafaskjfalsdfj</div> -->
+
+        <!-- <ul class="breadcrumb users" dir="rtl">
+            <li><a href="#">خانه</a></li> 
+            <li><a href="#">مالکین</a></li>
+        </ul>  -->
+
+        <div class="parent_div" style="position: relative;">
+     
+            <ul class="breadcrumb management" dir="rtl">
+                <li><a href="#">دش بورد</a></li>
+                <li><a href="#">مالکین</a></li>
+            </ul>     
+            
+            <!-- <div class="alert-bootstarp warning" dir="rtl">
+                <span class="alert-bootstarp__closebtn " onclick="hideBootstrapAlert('warning')">&times;</span>
+                <strong> هشدار &nbsp;:</strong>
+                <span class="alert-bootstarp-text"> متوجه انجام این عملیه باشید </span>
+            </div> -->
+
+        </div> 
+  
+        <div class="table_container">
+
+            <table dir="rtl" lang="ar" class="table_container__table">
+                <tr class="table_container__table--row">
+                    <th><a href="">نام</a> </th>
+                    <th><a href="">ولد</a> </th>  
+                    <th> <a href="">ولدیت</a> </th>
+                    <th><a href="">تلفن</a> </th>  
+                    <th><a href=""> نام سرپرست فامیل</a> </th>
+                    <th> <a href=""> حذف / ویرایش</a></th>
+                    <th><a href="">عکس</a> </th>
+                </tr>  
+    
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td> 
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td> 
+                    <td>      
+                        <a href="#" class="wrap-edit"> 
+                            <button class="actions__form--edit"> ویرایش</button>
+                        </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                    </td>   
+        
+                    <td>      
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+                    </td>  
+                </tr> 
+
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td> 
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                    <td>    
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete" 
+                        onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td>  
+
+                    <td>
+
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr>
+
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                   <td>    
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td> 
+
+                    <td>
+
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr>
+
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                    <td>    
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td> 
+
+                    <td>
+
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr>
+
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                    <td>    
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td> 
+
+                    <td>
+
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr> 
+
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                    <td>    
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td> 
+
+                    <td>
+
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr>
+  
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                    <td>    
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td> 
+
+                    <td>
+
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr>
+
+                <tr class="table_container__table--row">
+                    <td>احمد شاه</td>
+                    <td>عبدالکریکم</td>
+                    <td>حبیب الله</td>
+                    <td dir="ltr"> ۰۷۸۲ ۸۵ ۲۳ ۴۵</td>
+                    <td>عبدالستار</td>
+                    <td>     
+                        <a href="#" class="wrap-edit">
+                        <button class="actions__form--edit"> ویرایش</button> </a>
+                        <button class="actions__form--delete"
+                         onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+
+                    </td>  
+
+                    <td>
+  
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--pic">
+                        <img src="img/user.jpg" alt="" class="table_container__table--row--picbig">
+
+                    </td>
+                </tr>
+  
+            </table> 
+      
+        </div> 
+          
+        <div class="pagination"> 
+            <a href="#"> آخرین </a>
+            <a href="#">قبل </a>
+            <a href="#" class="backclear"> صفحه ۲ از ۲ </a>
+            <a href="#">بعد</a>
+            <a href="#">  اولین </a>
+ 
+        </div>   
+    </div> 
+     
+    <div class="nav-bar">
+        <div class="describe">  
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+                    </a>   
+                </li>   
+
+                <li class="nav-bar__item">
+                    <a href="reports-of-cash.html" class="nav-bar__link">
+                        <span > رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                    </a> 
+                </li>   
+
+                <li class="nav-bar__item"> 
+                    <a href="possessors-section.html" class="nav-bar__link">
+                        <span>مالکین <span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="properties-section.html" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a> 
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="received-cash.html" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a> 
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="history-of-pasted-works.html" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="users-page.html" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="setting.html" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>  
+        </nav>
+ 
+        <div class="about-text">
+            <p class="about"> درباره</p>       
+            یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+
+    </div>
+    <!-- </div> -->
+
+</body>
+
+</html>

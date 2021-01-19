@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title> مشخصات مالک </title>
+</head> 
+  
+<body class="container"> 
+        <div class="content"> 
+       
+            <div class="actions">    
+                <div class="tax"> 
+                    <button href="" class="tax__get"><a href="#">  اخذ مالیات</a></button>
+                    <button href="" class="tax__add"><a href="#">افزودن ملکیت</a> </button>
+                </div>    
+                <h2 class="actions__heading  actions__heading--propertiesOfPossessor"> مشخصات مالک</h2>
+                <!-- <div class="actions__form  actions__form--second">
+                  
+                         <button class="actions__form--edit"> ویرایش</button>
+                        <button class="actions__form--delete">حذف</button>
+                </div> -->
+            </div>      
+     
+            <ul class="breadcrumb Possessproperties" dir="rtl">
+                <li><a href="#">دش بورد</a></li>
+                <li><a href="#">مالکین</a></li>
+                <li><a href="#"> مشخصات مالک</a> </li>
+            </ul>
+     
+  
+            <div class=" profile-of-possessor">                
+                <img id="output" src="img/download.png" class="profile__pic"  for="file" alt="مکان عکس" />
+            </div> 
+
+                <form action="" class="secondform" dir="rtl"  method="POST">
+    
+                    <div class="secondform__column ">  
+                        <div class="secondform__column--field" >  
+                            <label> اسم  </label>  <input type="text" value="Centerd" disabled>
+                          </div>   
+                        <div  class="secondform__column--field"> <label>اسم شخص </label> <input type="text" disabled></div>
+                        <div  class="secondform__column--field"> <label>اسم پدر </label><input type="text" disabled></div>
+                        <div  class="secondform__column--field"> <label>اسم پدر بزرگ </label> <input type="text" disabled></div>
+                    </div>   
+      
+                    <div class="secondform__column secondform__middlecolumn ">
+                        <div  class="secondform__column--field"> <label for="">شماره تماس  </label><input type="text" disabled></div>
+                        <div  class="secondform__column--field">  
+                             <label for="">تاریخ ثبت  </label><input type="text"
+                              value="۱۳۹۸/۳/۲۴" lang="per" disabled>
+                            </div>   
+                        <div  class="secondform__column--field"> <label for="">اسم سرپرست فامیل </label><input type="text" disabled></div>
+                    </div>
+    
+                    <div class="secondform__column secondform__column--last">
+                        <div  class="secondform__column--field"> <label>نمبر تذکره </label> <input type="text" disabled> </div>
+                        <div  class="secondform__column--field"> <label>جلد تذکره </label><input type="text" disabled></div>
+                        <div  class="secondform__column--field"> <label>شماره تذکره </label><input type="text" disabled></div>
+                        <div  class="secondform__column--field"><label>صفحه تذکره </label><input type="text" disabled> </div>
+                    </div>  
+ 
+                </form>    
+  
+                <div class="details-of-possessor">  
+                    <h2 class="details-of-possessor__headingtwo">ملکیت های تحت تصرف مالک</h2>
+                    <table dir="rtl" lang="ar" class="details-of-possessor__secondtable">  
+                    
+                    <tr class="details-of-possessor__secondtable--row">    
+                            <th>نوعیت ملک</th>    
+                            <th>آدرس کامل</th>  
+                            <th>حدود اربعه</th>  
+                            <th>تاریخ ثبت ملک</th>   
+                            <th>موقعیت زون</th> 
+                            <th>واحد </th>    
+                            <th>جزییات </th>  
+                    </tr> 
+                        <tr class="details-of-possessor__secondtable--row">  
+                            <td>ساختنان رهایشی </td>
+                            <td>گذر سوم ُ ناحیه ۱</td>
+                            <td class="surronded--area"> شرق: احمد،غربا:سرک
+                                جنوب:زمین،شمال:همسایه</td>
+                            <td dir="ltr"> 1391 / 1 / 1 </td>
+                            <td>بلاک اول</td>
+                            <td></td>  
+                            <td><a href="#" style="text-decoration: none;">بیشتر</a></td>
+                        </tr>
+                        <tr class="details-of-possessor__secondtable--row">  
+                            <td>اداره  دولتی </td>
+                            <td>گذر سوم ُ ناحیه ۱</td>
+                            <td class="surronded--area"> شرق: احمد،غربا:سرک
+                                جنوب:زمین،شمال:همسایه</td>
+                            <td dir="ltr"> 1391 / 1 / 1 </td>
+                            <td>بلاک اول</td>
+                            <td></td>
+                            <td><a href="#" style="text-decoration: none;">بیشتر</a></td>
+                        </tr> 
+                </table>
+            </div>
+        </div>
+        <div class="nav-bar">
+
+            <div class="describe">  
+                <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+                <svg class="describe__icon">
+                    <use xlink:href="img/sprite.svg#icon-share2"></use>
+                </svg>
+            </div>
+  
+            <nav>
+                <ul class="nav-bar__list">
+                    <li class="nav-bar__item">
+                        <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                            <span>صفحه اصلی</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-home3"></use>
+                            </svg>
+                        </a>   
+                    </li>   
+ 
+                    <li class="nav-bar__item">
+                        <a href="reports-of-cash.html" class="nav-bar__link">
+                            <span > رابورهای مالی</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-user"></use>
+                            </svg>
+                        </a> 
+                    </li>   
+  
+                    <li class="nav-bar__item"> 
+                        <a href="possessors-section.html" class="nav-bar__link">
+                            <span>مالکین <span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-users"></use>
+                            </svg>
+                        </a>
+                    </li> 
+    
+                    <li class="nav-bar__item">
+                        <a href="properties-section.html" class="nav-bar__link">
+                            <span> ملکیت ها</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-history"></use>
+                            </svg>
+                        </a> 
+                    </li>
+   
+                    <li class="nav-bar__item">
+                        <a href="received-cash.html" class="nav-bar__link">
+                            <span> رسیدهای پولی</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-keep"></use>
+                            </svg>
+                        </a> 
+                    </li> 
+    
+                    <li class="nav-bar__item">
+                        <a href="history-of-pasted-works.html" class="nav-bar__link">
+                            <span> تاریخچه</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </a>
+                    </li>
+  
+                    <li class="nav-bar__item">
+                        <a href="users-page.html" class="nav-bar__link">
+                            <span> استفاده کننده گان سیستم</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                            </svg>
+                        </a>
+                    </li> 
+    
+                    <li class="nav-bar__item">
+                        <a href="setting.html" class="nav-bar__link">
+                            <span> تنظیمات</span>
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-office"></use>
+                            </svg>
+                        </a>
+                    </li>
+    
+                </ul>  
+            </nav>
+     
+            <div class="about-text">
+                <p class="about"> درباره</p>       
+                یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+                عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+                دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+            </div>
+
+        </div>
+</body> 
+
+</html>

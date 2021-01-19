@@ -1,0 +1,270 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title> ثبت انواع ملکیت </title>
+</head>
+  
+<body class="container"> 
+     
+       
+ <!-- <div class="progressbar">
+        <p class="progressbar-text"> در حال بارگذاری لطفا صبور باشید </p>
+    <div>  
+        <div class="progress-bar-container">
+          <div class="progress-bar stripes animated reverse slower">
+            <span class="progress-bar-inner stripes slower"></span>
+          </div>  
+        </div>
+      </div>
+ </div> -->
+    
+  
+            
+ <div class="cd-popup" role="">
+    <div class="cd-popup-container">
+        <span>! اخطاریه</span>   
+        <p id="servertext">    </p>
+        <form action="#" method="POST" class="cd-buttons" id="form-id">
+            <input type="hidden" name="" value="" id="hiddenfield"> 
+            <input type="submit" value="بلی" id="yes">
+            <button class="no">نخیر</button>
+        </form>     
+             
+        <a href="#0" class="cd-popup-close img-replace"></a>
+    </div> <!-- cd-popup-container -->
+</div> <!-- cd-popup -->  
+  
+   
+         
+   
+    <div class="content">
+
+        <h2 class="set-heading"> ثبت انواع سیستم</h2>
+
+        <ul class="breadcrumb gettaxpage" dir="rtl">
+            <li><a href="#">خانه</a></li>
+            <li><a href="#">تنظیمات</a></li>
+            <li><a href="#">ثبت نوع سیستم</a></li>
+
+        </ul>
+   
+  
+        <div class="kindofsys">
+            <form action="" dir="rtl" class="kindofsys__form"  method="POST">
+ 
+            <div class="kindofsys__first"> 
+
+                <div class="formcontainer__form--field">
+                    <label for="">نوع ملکیت</label>
+                    <select> 
+                        <option value="0">رهایشی</option>
+                        <option value="1">  دولتی</option>
+                        <option value="2">خصوصی</option>
+                        <option value="3">رهایشی</option>
+                        <option value="4">دولتی</option>
+                      </select> 
+                </div>    
+ 
+                <div class="formcontainer__form--field">
+                    <label for="" >اسم ملکیت</label>
+                     <input type="text" class="add-possess">
+                </div>  
+            </div>
+    
+       
+                <div class="kindofsys__button"> 
+                      
+                    <input type="submit"
+                     class="kindofsys__button--button kindofsys__button--button--cancel" value="لغو"
+                      >    
+                       
+                      <input type="submit"
+                      class="kindofsys__button--button" value="ذخیره"
+                       >   
+                </div>    
+                <div class="parent_div" style="position: relative;">
+                </div>
+            </form>
+        </div>   
+
+
+
+        <div class="register-kind">
+            <table class="register-kind__table" dir="rtl">
+
+                <tr class="register-kind__table--row">
+                    <th> اسم ملک</th>
+                    <th>نوع ملک</th>
+                    <th>عملیه</th>
+  
+                </tr>  
+ 
+                <tr class="register-kind__table--row">
+                    <td></td> 
+                    <td></td>   
+                    <td>  
+                        <button class="reg-del"  
+                         onclick="showCdPopUp(23,'This is the value from server')">حذف</button>
+                         <a href="#"> <button class="reg-edit">ویرایش</button></a>   
+                    </td>
+                </tr>
+     
+                <tr class="register-kind__table--row">
+                    <td></td>
+                    <td></td>  
+                    <td>
+                        <button class="reg-del"  
+                        onclick="showCdPopUp(23,'This is the value from server')">حذف</button>
+                         <a href="#"> <button class="reg-edit">ویرایش</button></a>   
+                    </td>
+                </tr> 
+
+
+                <tr class="register-kind__table--row">
+                    <td></td>
+                    <td></td>
+                    <td> 
+                        <button class="reg-del"  
+                        onclick="showCdPopUp(23,'This is the value from server')">حذف</button>
+                        <a href="#"> <button class="reg-edit">ویرایش</button></a>   
+                    </td>
+                </tr>
+  
+                <tr class="register-kind__table--row">
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="reg-del"  
+                        onclick="showCdPopUp(23,'This is the value from server')">حذف</button>
+                        <a href="#"> <button class="reg-edit">ویرایش</button></a>   
+                    </td>
+
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="reg-del"  
+                        onclick="showCdPopUp(23,'This is the value from server')">حذف</button>
+                        <a href="#"> <button class="reg-edit">ویرایش</button></a>   
+                    </td>
+
+                </tr>
+
+
+                <tr class="register-kind__table--row">
+                    <td></td>
+                    <td></td> 
+                    <td>  
+                        <button class="reg-del"   
+                        onclick="showCdPopUp(25,'This is the server side valu ')">حذف</button>
+                        <a href="#"> <button class="reg-edit">ویرایش</button></a>   
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>  
+     
+ 
+    <div class="nav-bar">
+
+        <div class="describe">  
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+                    </a>   
+                </li>   
+
+                <li class="nav-bar__item">
+                    <a href="reports-of-cash.html" class="nav-bar__link">
+                        <span > رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                    </a> 
+                </li>   
+
+                <li class="nav-bar__item"> 
+                    <a href="possessors-section.html" class="nav-bar__link">
+                        <span>مالکین <span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="properties-section.html" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a> 
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="received-cash.html" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a> 
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="history-of-pasted-works.html" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="users-page.html" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="setting.html" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>  
+        </nav>
+ 
+        <div class="about-text">
+            <p class="about"> درباره</p>       
+            یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+
+    </div>
+</body>
+   
+</html>

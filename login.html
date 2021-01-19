@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title> صفحه ورود  </title>
+    <style>
+  .login_next_page_btn {
+    color: white;;
+    font-size: 16px;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+
+}
+    </style> 
+  
+</head> 
+  
+<body>  
+      
+    <section class="login_page"> 
+
+        <form action="" dir="rtl" class="login-form" method="POST">
+            <div class="logo-wrapper">  
+                <img src="img/Manucipality.jpg" alt="">
+            </div>
+            <p class="login-text">جمهوری اسلامی افغانستان</p>
+            <p class="login-text">سیستم صفایی شاروالی زنج</p>
+
+            <h3 class="login-heading-three">بخش ورودی به سیستم</h3>
+   
+            <div class="input-container">
+                <svg class="icon"> 
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <input class="input-field" type="text" placeholder="نام کاربری" name="usernm"  oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required="required">
+            </div>  
+
+            <div class="input-container">
+                <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-locked"></use>
+                </svg>
+                <input class="input-field" type="password" placeholder="رمز کاربری" name="email"  oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" required="required">
+            </div>
+
+            <div class="error-message">   
+                <p class="error-message__kind"> </p>
+               <ul class="error-message__list">
+                   <li class="error-message__list--item"> </li>
+                   <li class="error-message__list--item"> </li>
+                   <li class="error-message__list--item"> </li>
+               </ul>   
+            </div>    
+           
+             
+   
+            <div class="input-container  link">
+                <div class="link__remember">
+                    <input type="checkbox">مرا به خاطر بسپارید    
+                </div>
+                    
+                <div class="link__sub">
+                    <input type="submit" value="ورود">
+                    <svg class="link__sub--arrow">
+                        <use xlink:href="img/sprite.svg#icon-arrow-left1"></use>
+                    </svg>
+                </div>    
+            </div>  
+            <p class="copy_right">  طراحی و توسعه توسط شرکت مایکروسس <i class="fa fa-registered"></i></p>
+           
+        </form>
+ 
+      <a href="index.html" class="login_next_page_btn" >صفحه بعدی</a>
+  
+    </section>
+
+</body>
+ 
+</html>

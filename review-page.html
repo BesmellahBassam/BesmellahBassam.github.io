@@ -1,0 +1,244 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/Chart/Chart.js"></script>
+    <script src="js/Chart/Chart.min.js"></script>
+    <title>قورم ثبت کاربران سیستم</title>
+
+    <style>   
+        @font-face {
+            font-family: iransans-bold;
+            src: url('../fonts/IRANSans-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: iransansmedium-regular;
+            src: url('../fonts/IRANSansMediumRegular.ttf');
+        }
+
+        @font-face {
+            font-family: iransans-regular;
+            src: url('../fonts/IRANSansRegular.ttf');
+        }
+    </style>
+
+    <script>
+        function chart(itemone, itemtwo, itemthree, itemfour, itemfive
+            , itemsix, today, yesterday, prevWeeek, prevMonth, prevYear) {
+
+            let mychart = document.getElementById('reviewChart').getContext('2d');
+            // let mychart1 = document.getElementById('myChar1').getContext('2d');
+  
+            Chart.defaults.global.defaultFontFamily = 'iransansmedium-regular';
+            Chart.defaults.global.defaultFontSize = 12;
+            Chart.defaults.global.defaultFontColor = 'gray';
+            // Chart.defaults.global.datasets.line.showLine = false;
+
+            var data = {
+                labels: [today, yesterday, prevWeeek, prevMonth, prevYear],
+                datasets: [{
+                    data: [itemone, itemtwo, itemthree, itemfour, itemfive, itemsix],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+  
+            var options = {
+                title: {
+                    display: false,
+                    text: 'فضای هارد دیسک به اساس گراف',
+                    fontSize: 16
+                },
+
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    // enabled:false
+                },
+                layout: {
+                    // padding:5,
+                    margin: {
+                        // left:-5
+                    },
+                }
+            };
+
+            let splineChart = new Chart(mychart, {
+                type: 'pie',
+                data: data,
+                options: options,
+  
+            });
+        }
+
+$(document).ready(function(){
+    var today = 'امروز';
+    var yesterday = 'دیروز';
+    var preWeek = 'هفته قبل';
+    var preMonth = 'ماه قیل';
+    var preyear = 'سال قبل';   
+    chart(10,13,9,8,4,6,today,yesterday,preWeek,preMonth,preyear);
+}); 
+    </script>
+
+</head>  
+ 
+<body class="container">
+  
+    <div class="content">
+
+        <h2 class="set-heading"> بررسی سیستم </h2>
+
+        <div class="review">
+  
+            <p class="review__paragraph">   فضای هارد دیسک</p>
+
+            <div class="review__legend">
+              
+                <span>10 GB</span>
+                <span>: کل فضای هارد </span>
+
+                <span>10 GB</span>      
+                <span>: کل فضای هارد </span>
+
+                <span>10 GB</span>
+                <span> : کل فضای هارد </span>
+
+                <span>10 GB</span>  
+                <span>: کل فضای هارد </span>
+
+            </div>
+
+          <div class="review__graph">
+                <canvas id="reviewChart">
+ 
+                </canvas>
+            </div>
+        </div>
+
+    
+
+  
+    </div>
+ 
+
+    <div class="nav-bar">
+
+        <div class="describe">  
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+                    </a>   
+                </li>   
+
+                <li class="nav-bar__item">
+                    <a href="reports-of-cash.html" class="nav-bar__link">
+                        <span > رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                    </a> 
+                </li>   
+
+                <li class="nav-bar__item"> 
+                    <a href="possessors-section.html" class="nav-bar__link">
+                        <span>مالکین <span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="properties-section.html" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a> 
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="received-cash.html" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a> 
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="history-of-pasted-works.html" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="users-page.html" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="setting.html" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>  
+        </nav>
+ 
+        <div class="about-text">
+            <p class="about"> درباره</p>       
+            یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+
+    </div>
+
+    <!-- </div> -->
+</body>
+
+</html>

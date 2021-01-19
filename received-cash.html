@@ -1,0 +1,194 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title> رسیدهای پولی  </title>
+</head> 
+    
+<body class="container"> 
+         
+    <div class="content">  
+
+        <div class="cash-header"> 
+            <form action="" class="cash-header__form" dir="rtl"  method="POST">
+                    <div class="cash-header__form--inwrap">
+                        <label for="">از تاریخ</label>
+                         <input type="text">
+                    </div>  
+                    <div class="cash-header__form--inwrap">
+                        <label for="">از تاریخ</label>
+                        <input type="text"> 
+                    </div>       
+                    <div class="cash-header__form--button">
+                        <input type="submit" value="جستجو">
+                    </div>   
+                </form>        
+     
+            <div class="cash-header__heading">
+                <h2 class="cash-header__heading--title">رسیدهای پولی </h2>
+            </div>
+
+           
+            <div class="cash-header__buttons">
+                <button class="cash-header__buttons--button">رسیدهای امروز</button>
+                <button class="cash-header__buttons--button">رسیدهای دیروز</button>
+                <button class="cash-header__buttons--button">مجموع رسید نقدی</button>
+            </div>
+
+        </div>  
+      
+
+
+        <div class="cash-table"> 
+
+            <table dir="rtl" lang="ar" class="cash-table__table">  
+                <tr class="cash-table__table--row">  
+                    <th></th>  
+                    <th>از بابت</th>
+                    <th>ثبت کننده</th>  
+                    <th>مقدار</th>    
+                </tr>
+
+                <tr class="cash-table__table--row">
+                    <td> <input type="checkbox"></td>
+                    <td>احمد شاه</td>
+                    <td>حبیب الله</td>
+                    <td>1000 افغانی</td>
+                </tr> 
+
+                <tr class="cash-table__table--row">
+                    <td> <input type="checkbox"></td>
+                    <td>احمد شاه</td>
+                    <td>حبیب الله</td>
+                    <td>1000 افغانی</td>
+                </tr> 
+
+                <tr class="cash-table__table--row">
+                    <td> <input type="checkbox"></td>
+                    <td>احمد شاه</td>
+                    <td>حبیب الله</td>
+                    <td>1000 افغانی</td>
+                </tr> 
+
+            </table>     
+        </div>    
+
+        <div class="pagination pagination-received"> 
+            <a href="#"> آخرین </a>  
+            <a href="#">قبل </a>
+            <a href="#" class="backclear"> صفحه ۲ از ۲ </a>
+            <a href="#">بعد</a>
+            <a href="#"> اولین </a>
+
+        </div>     
+      
+        <form action="#" dir="rtl" class="cash-second-form"> 
+            <label for=" ">مجموعه  : </label>     <input type="text" >
+        </form>   
+    </div>
+
+
+  
+  
+    <div class="nav-bar">
+
+        <div class="describe">  
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+                    </a>   
+                </li>   
+
+                <li class="nav-bar__item">
+                    <a href="reports-of-cash.html" class="nav-bar__link">
+                        <span > رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg> 
+                    </a> 
+                </li>   
+
+                <li class="nav-bar__item"> 
+                    <a href="possessors-section.html" class="nav-bar__link">
+                        <span>مالکین <span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="properties-section.html" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a> 
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="received-cash.html" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a> 
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="history-of-pasted-works.html" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="users-page.html" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="setting.html" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>  
+        </nav>
+ 
+        <div class="about-text">
+            <p class="about"> درباره</p>       
+            یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <title> تنظیمات سیستم </title>
+</head>
+
+<body class="container">
+
+          
+    <div class="profile_page_wrapper">
+
+        <div class="profile_page_wrapper_child" id="changepassbox">
+            <p class="searchbox__form--popup changepass--popup">
+                <span class="alert__closebtn alert__closebtn__userprop"
+                    onclick="hide_Profile_Page_Wrapper(event)">&times;</span>
+                <span class="searchbox__form--popup--search">تغییر پسورد </span>
+            </p>
+
+            <form action="" class="searchbox__form  changepassbox__form" dir="rtl" method="POST">
+                
+                <div class="searchbox__form--pillar   changepassbox__pillar  first-pillar">
+
+                    <div class="formcontainer__form--field changepassbox__pillar--field">
+                        <label for=""> پسورد قبلی </label>
+                        <input type="text">
+                    </div>
+
+                    <div class="formcontainer__form--field changepassbox__pillar--field">
+                        <label for=""> پسورد جدید</label><input type="text">
+                    </div>
+
+                    <div class="formcontainer__form--field changepassbox__pillar--field">
+                        <label for=""> تکرار پسورد </label><input type="text">
+                    </div>
+                </div>
+
+                <div class="searchbox__form--pillar">
+                    <ul>
+                        <p class="guidance"> رهنمایی </p>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                    </ul>
+                </div>  
+  
+                <p class="searchbox__form__btn--wrapper changepassbtn">
+                    <input type="submit" value="تایید">
+                </p>
+  
+            </form>
+        </div>
+    </div>
+<div>
+  
+
+    <div class="content">
+        <h2 class="signup-heading"> مشخصات کاربر </h2>
+
+       
+
+        <div class="profile-page">
+
+            <!-- <div class="profile-pic">
+                <img id="output" src="img/download.png" class="profile__pic" for="file" alt="مکان عکس" />
+            </div> -->
+             
+            <div class="profile-page__wrapper">
+  
+                <div class="profile-pic">
+                    <img id="output" src="img/download.png" class="profile__pic" for="file" alt="مکان عکس" />
+                </div>
+            
+ 
+                <button onclick="deletefile(event,'Thsi is the data')" class="profile_Page_Trash_Icon">
+                    <label>
+                        <svg class="icons__icon icons__icon--trash">
+                            <use xlink:href="img/sprite.svg#icon-bin" for="file"></use>
+                        </svg>
+                    </label>
+                </button>    
+  
+                <form action="#" class="profile-page__form" dir="rtl" method="POST">
+
+                    <div class="profile_page_icons">   
+                            <input type="file" accept="image/*" name="image" id="file"
+                                onchange="loadFile(event)"
+                                style="display: none;">   
+                            <label for="file"> 
+                                <svg class="icons__icon">
+                                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                </svg>
+                            </label>
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label>نام کاربر </label>
+                        <input type="text"> 
+                    </div>    
+
+                    <div class="formcontainer__form--field">
+                        <label for="">تماس </label>
+                        <input type="text">
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for=""> آی دی دفتر</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for="">رمز عبور</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for="">تخلص</label>
+                        <input type="text">
+                    </div>
+ 
+                    <div class="formcontainer__form--field">
+                        <label for="">تاریخ تولد</label>
+                        <input type="text">
+                    </div>
+      
+                    <div class="change-pw">
+                        <button class="profile-page__button"
+                        onclick="show_Profile_Page_Wrapper(event)">تغییر رمز</button>
+
+                        <input type="submit" value=" ثبت تغییرات" class="last-input">
+                          
+                    </div>   
+                    
+
+                </form>
+            </div> 
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="nav-bar">
+
+    <div class="describe">  
+        <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+        <svg class="describe__icon">
+            <use xlink:href="img/sprite.svg#icon-share2"></use>
+        </svg>
+    </div>
+  
+    <nav>
+        <ul class="nav-bar__list">
+            <li class="nav-bar__item">
+                <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                    <span>صفحه اصلی</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-home3"></use>
+                    </svg>
+                </a>   
+            </li>   
+
+            <li class="nav-bar__item">
+                <a href="reports-of-cash.html" class="nav-bar__link">
+                    <span > رابورهای مالی</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                    </svg>
+                </a> 
+            </li>   
+
+            <li class="nav-bar__item"> 
+                <a href="possessors-section.html" class="nav-bar__link">
+                    <span>مالکین <span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-users"></use>
+                    </svg>
+                </a>
+            </li> 
+
+            <li class="nav-bar__item">
+                <a href="properties-section.html" class="nav-bar__link">
+                    <span> ملکیت ها</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-history"></use>
+                    </svg>
+                </a> 
+            </li>
+
+            <li class="nav-bar__item">
+                <a href="received-cash.html" class="nav-bar__link">
+                    <span> رسیدهای پولی</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-keep"></use>
+                    </svg>
+                </a> 
+            </li> 
+
+            <li class="nav-bar__item">
+                <a href="history-of-pasted-works.html" class="nav-bar__link">
+                    <span> تاریخچه</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="nav-bar__item">
+                <a href="users-page.html" class="nav-bar__link">
+                    <span> استفاده کننده گان سیستم</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                    </svg>
+                </a>
+            </li> 
+
+            <li class="nav-bar__item">
+                <a href="setting.html" class="nav-bar__link">
+                    <span> تنظیمات</span>
+                    <svg class="nav-bar__icon">
+                        <use xlink:href="img/sprite.svg#icon-office"></use>
+                    </svg>
+                </a>
+            </li>
+
+        </ul>  
+    </nav>
+
+    <div class="about-text">
+        <p class="about"> درباره</p>       
+        یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+        عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+        دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+    </div>
+
+</div>
+
+
+  
+
+</body>
+
+</html>

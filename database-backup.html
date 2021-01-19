@@ -1,0 +1,354 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title> پشتیبانی دیتابس </title>
+    <style>
+
+    </style>
+  
+</head>
+ 
+<body class="container">
+
+   
+                    
+    <div class="change_pass_box_wrapper">
+                    
+        <div class="changepassbox " id="changepassbox">
+            <p class="searchbox__form--popup changepass--popup">
+                <span class="alert__closebtn alert__closebtn__backup"
+                 onclick="hidepwbox(event)">&times;</span>
+                <span class="searchbox__form--popup--search">تغییر پسورد </span>
+            </p>
+         
+            <form action="" class="searchbox__form  changepassbox__form" dir="rtl" method="POST">
+                <div class="searchbox__form--pillar   changepassbox__pillar">
+                    <div class="dbbackup-popup">
+                        <img id="output" for="file1" class="dbbackfile" />
+                        <label>
+ 
+                            <input type="file" accept=".pdf,xls,.xlsx,.docx,.ttf," name="image" id="file" 
+                                onchange="loadBakcupFile(event)"
+                                style="display: none;">  
+  
+                            <svg class="icons__icon  backuploadicon" id="backuploadicon">
+                                <use xlink:href="img/sprite.svg#icon-document"></use>
+                            </svg>
+                            <p id="choosenfile"> انتخاب فایل</p>
+                        </label>   
+                    </div>
+                    <div class="formcontainer__form--field changepassbox__pillar--field">
+                        <label for=""> نام کاربر </label>
+                        <input type="text">
+                    </div>
+
+                    <div class="formcontainer__form--field changepassbox__pillar--field">
+                        <label for=""> رمز عبور </label><input type="text">
+                    </div>
+
+                </div>
+
+                <div class="searchbox__form--pillar  database-backup-ul">
+                    <ul class="ul-list">
+                        <p class="guidance"> رهنمایی </p>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                        <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                    </ul>
+
+                </div>
+
+                <p class="searchbox__form__btn--wrapper changepassbtn">
+                    <input type="submit" value="تایید">
+                </p>
+
+            </form>
+        </div>
+    </div> 
+ 
+
+<div class="change_pass_box_wrapper_second">
+    <div class="changepassboxsecond" id="changepassbox">
+        <p class="searchbox__form--popup changepass--popup">
+            <span class="alert__closebtn alert__closebtn__backup" onclick="hidepwboxsecond ()">
+                &times;</span>
+            <span class="searchbox__form--popup--search">تغییر پسورد </span>
+        </p>
+
+        <form action="" class="searchbox__form  changepassbox__form" dir="rtl" method="POST">
+
+            <div class="searchbox__form--pillar   changepassbox__pillar">
+
+                <div class="formcontainer__form--field changepassbox__pillar--field">
+                    <label for=""> نام کاربر </label>
+                    <input type="text">
+                </div>
+
+                <div class="formcontainer__form--field changepassbox__pillar--field">
+                    <label for=""> رمز عبور </label><input type="text">
+                </div>
+
+            </div>
+
+            <div class="searchbox__form--pillar  database-backup-ul">
+                <ul class="ul-list">
+                    <p class="guidance"> رهنمایی </p>
+                    <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                    <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                    <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                    <li>در این قسمت نکاتی گذاشته خواهد شد </li>
+                </ul>
+            </div>
+            <p class="searchbox__form__btn--wrapper changepassbtn">
+                <input type="submit" value="تایید">
+            </p>
+
+        </form>
+    </div>
+</div>
+
+      
+   
+    <div class="cd-popup" role="">
+        <div class="cd-popup-container">
+            <span>! اخطاریه</span>
+            <p id="servertext"> </p>
+            <form action="#" method="POST" class="cd-buttons" id="form-id">
+                <input type="hidden" name="" value="" id="hiddenfield">
+                <input type="submit" value="بلی" id="yes">
+                <button class="no">نخیر</button>
+            </form>
+
+            <a href="" class="cd-popup-close img-replace"></a>
+        </div> <!-- cd-popup-container -->
+    </div> <!-- cd-popup -->
+
+
+    <div class="content">
+
+        <h2 class="set-heading"> پشتیبانی دیتابس </h2>
+        <ul class="breadcrumb gettaxpage" dir="rtl">
+            <li><a href="#">دش بورد</a></li>
+            <li><a href="#">تنظیمات</a></li>
+            <li><a href="#">پشتیبانی دیتابس</a></li>
+        </ul>
+
+        <div class="backup">
+
+            <button class="backup__button" onclick="showpwbox(event)">
+                <svg class="backup__icon">
+                    <a href="">
+                        <use xlink:href="img/sprite.svg#icon-arrows"></use>
+                    </a>
+                </svg>
+                <p class="backup__text">بازگشت پشتیبانی</p>
+            </button>
+  
+            <button class="backup__button">
+                <svg class="backup__icon">
+                    <a href="_blank">
+                        <use xlink:href="img/sprite.svg#icon-computer"></use>
+                    </a>
+                </svg>
+                <p class="backup__text"> تهیه پشتیبانی</p>
+
+            </button>
+
+        </div>
+
+
+        <div class="database-backup">
+
+            <table class="database-backup__table" dir="rtl">
+
+                <tr class="register-kind__table--row">
+                    <th>شماره</th>
+                    <th> تاریخ</th>
+                    <th> نام پشتیبانی</th>
+                    <th>عملیه</th>
+
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td>1</td>
+                    <td dir="ltr"> 1398 / 4 / 24 </td>
+                    <td></td>
+                    <td>  
+                        <button class="actions__form--delete reg-del"
+                            onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                        <button class="reg-edit" onclick="showpwboxsecond()"> اعمال </button>
+                        <button class="property-registering">دانلود </button>
+                    </td>
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td>1</td>
+                    <td dir="ltr"> 1398 / 4 / 24 </td>
+                    <td></td>
+                    <td>
+                        <button class="actions__form--delete reg-del"
+                        onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                        <button class="reg-edit" onclick="showpwboxsecond()"> اعمال </button>
+                        <button class="property-registering">دانلود </button>
+
+                    </td>
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td>1</td>
+                    <td dir="ltr"> 1398 / 4 / 24 </td>
+                    <td></td>
+                    <td>
+                        <button class="actions__form--delete reg-del"
+                            onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                        <button class="reg-edit" onclick="showpwboxsecond()"> اعمال </button>
+                        <button class="property-registering">دانلود </button>
+                    </td>
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td>1</td>
+                    <td dir="ltr"> 1398 / 4 / 24 </td>
+                    <td></td>
+                    <td>
+                        <button class="actions__form--delete reg-del"
+                            onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                        <button class="reg-edit" onclick="showpwboxsecond()"> اعمال </button>
+                        <button class="property-registering">دانلود </button>
+                    </td>
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td>1</td>
+                    <td dir="ltr"> 1398 / 4 / 24 </td>
+                    <td></td>
+                    <td>
+                        <button class="actions__form--delete reg-del"
+                            onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                        <button class="reg-edit" onclick="showpwboxsecond()"> اعمال </button>
+                        <button class="property-registering">دانلود </button>
+                    </td>
+                </tr>
+
+                <tr class="register-kind__table--row">
+                    <td>1</td>
+                    <td dir="ltr"> 1398 / 4 / 24 </td>
+                    <td></td>
+                    <td>
+                        <button class="actions__form--delete reg-del"
+                            onclick="showCdPopUp(23,'This is the server side valu ')">حذف</button>
+                        <button class="reg-edit" onclick="showpwboxsecond()"> اعمال </button>
+                        <button class="property-registering">دانلود </button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+
+ 
+    <div class="nav-bar">
+
+        <div class="describe">  
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav> 
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="index.html" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+                    </a>   
+                </li>   
+
+                <li class="nav-bar__item">
+                    <a href="reports-of-cash.html" class="nav-bar__link">
+                        <span > رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                    </a> 
+                </li>   
+
+                <li class="nav-bar__item"> 
+                    <a href="possessors-section.html" class="nav-bar__link">
+                        <span>مالکین <span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="properties-section.html" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a> 
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="received-cash.html" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a> 
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="history-of-pasted-works.html" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="users-page.html" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li> 
+
+                <li class="nav-bar__item">
+                    <a href="setting.html" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>  
+        </nav>
+ 
+        <div class="about-text">
+            <p class="about"> درباره</p>       
+            یاد  داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+
+    </div>
+
+</body>
+
+</html>

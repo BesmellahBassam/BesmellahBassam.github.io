@@ -1,0 +1,319 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>قورم ثبت کاربران سیستم</title>
+
+
+</head>
+
+<body class="container">
+
+    <div class="content">
+        <h2 class="set-heading"> فورم ثبت نام کاربران سیستم</h2>
+
+        <ul class="breadcrumb registering" dir="rtl">
+            <li><a href="#">دش بورد</a></li>
+            <li><a href="#">مالکین</a></li>
+            <li><a href="#"> ثبت مالکین</a></li>
+        </ul>
+
+
+        <div class="profile">
+            <img id="output" src="img/download.png" class="profile__pic" for="file" alt="مکان عکس" />
+        </div>
+
+        <div class="formcontainer">
+
+
+
+            <div class="trashbuttoncontainer">
+                <button onclick="deletefile(event,'this is server side image')" class="trashicon">
+                    <label>
+                        <svg class="icons__icon icons__icon--trash">
+                            <use xlink:href="img/sprite.svg#icon-bin" for="file"></use>
+                        </svg>
+                    </label>
+                </button>
+            </div>
+
+
+
+            <form action="#" class="formcontainer__form" dir="rtl" method="POST">
+
+                <div class="icons_wrapper">
+                    <div>
+                        <div class="upload_icon_on_form_of_registeringg_users">
+                            <input type="file" accept="image/*" name="image" id="file"
+                             onchange="loadFile(event)"
+                                style="display: none;">
+                            <label for="file">
+                                <svg class="icons__icon">
+                                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                </svg>
+                            </label>    
+                        </div>
+                    </div>
+                </div>
+  
+
+                <div>
+                    <div class="formcontainer__form--field">
+                        <label for=""> نام کاربر
+                            <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                                required="required" class="input">
+                        </label>
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for=""> رمز عبور
+                            <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                                required="required" class="input">
+                        </label>
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for=""> تماس
+                            <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                                required="required" class="input">
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="formcontainer__form--field">
+                        <label for=""> تخلص
+                            <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                                required="required" class="input">
+                        </label>
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for="">آی-دی-دفتر
+                            <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                                required="required" class="input">
+                        </label>
+                    </div>
+
+                    <div class="formcontainer__form--field">
+                        <label for=""> تاریخ تولد
+                            <input type="text" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"
+                                required="required" class="input">
+                        </label>
+                    </div>
+                </div>
+
+                <p class="formcontainer__form--respon"> تعیین صلاحیت ها </p>
+
+                <div class="permitrespon">
+
+                    <div class="permitrespon__allow">
+                        <p>ورود به بخش مالکین </p>
+                        <label for="">
+                            <input type="checkbox" id="selectall">
+                            انتخاب گزینه ها
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" disabled class="case">
+                            رسیدهای های پولی
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" disabled class="case">
+                            اخذ مالیات </label>
+                        <label for="">
+                            <input type="checkbox" disabled class="case">
+                            رسیدهای های پولی </label>
+                        <label for="">
+                            <input type="checkbox" disabled class="case">
+                            اخذ مالیات </label>
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" disabled class="case">
+                            راپور های مالی </label>
+
+
+
+                    </div>
+
+                    <div class="permitrespon__allow">
+
+                        <p class="middle-title">ورود به بخش ملکیت ها </p>
+
+                        <label for="">
+                            <input type="checkbox" id="selectall2">
+                            انتخاب گزینه ها
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" disabled class="col2">
+                            رسیدهای های پولی
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" disabled class="col2">
+                            اخذ مالیات </label>
+                        <label for="">
+                            <input type="checkbox" disabled class="col2">
+                            رسیدهای های پولی </label>
+                        <label for="">
+                            <input type="checkbox" disabled class="col2">
+                            اخذ مالیات </label>
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" disabled class="col2">
+                            راپور های مالی </label>
+
+                    </div>
+
+                    <div class="permitrespon__allow">
+
+                        <p>بخش متفرقه</p>
+
+                        <label for="" class="seperated_parts">
+                            <input type="checkbox">
+                            انتخاب گزینه ها
+                        </label>
+
+                        <label for="" style="margin-top: 1rem;">
+                            <input type="checkbox" class="col3">
+                            رسیدهای های پولی
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" class="col3">
+                            اخذ مالیات </label>
+
+                        <label for="">
+                            <input type="checkbox" class="col3">
+                            رسیدهای های پولی </label>
+                        <label for="">
+                            <input type="checkbox" class="col3">
+                            اخذ مالیات </label>
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" class="col3">
+                            راپور های مالی </label>
+
+                    </div>
+
+                </div>
+
+
+                <p class="formcontainer__form--submit">
+                    <input type="reset" value="لغو ثبت">
+                    <input type="submit" value="ذخیره">
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="nav-bar">
+        <div class="describe">
+            <span class="describe__text"> سیستم ثبت عواید شاروالی نیمروز </span>
+            <svg class="describe__icon">
+                <use xlink:href="img/sprite.svg#icon-share2"></use>
+            </svg>
+        </div>
+
+        <nav>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link  nav-bar__link--active">
+                        <span>صفحه اصلی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-home3"></use>
+                        </svg>
+
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> رابورهای مالی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span>مالکین <span>
+                                <svg class="nav-bar__icon">
+                                    <use xlink:href="img/sprite.svg#icon-users"></use>
+                                </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> ملکیت ها</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-history"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> رسیدهای پولی</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-keep"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> تاریخچه</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> استفاده کننده گان سیستم</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-hand-stop"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-bar__item">
+                    <a href="#" class="nav-bar__link">
+                        <span> تنظیمات</span>
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-office"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="about-text">
+            <p class="about"> درباره</p>
+            یاد داشت این سیستم برای ثبت ملکیت ها ؛ مالکین ؛
+            عواید مخصوص شاروالی نیمروز به ابتکار محترم نور هوتک شاروال نیمروز ساخته شده است سیستم
+            دارای قابلیت های مختلف از جمله نمایش وچاپ راپورها از چشمه های عایداتی مختلف میباشد
+        </div>
+    </div>
+
+    <!-- </div> -->
+</body>
+
+</html>
